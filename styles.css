@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+body {
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-white)
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto 0 auto;
+}
+
+@media (max-width:865px) {
+    .container {
+        max-width: 720px;
+    }
+
+    #survey-form {
+        padding: 2.5rem 1rem;
+    }
+}
+
+@media (max-width:750px) {
+    .container {
+        max-width: 600px;
+    }
+
+    #survey-form {
+        padding: 2.5rem 1rem;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    margin: 5rem auto 2rem;
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: 400;
+    
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+
+    padding-bottom: 0.1rem;
+}
+
+#description {
+    font-style: italic;
+    font-weight: 300;
+
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#survey-form {
+    background: var(--color-darkblue-alpha);
+    padding: 2.5rem 2rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-bottom: 2rem;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+select {
+    width: 100%;
+    padding: 10px 18px;
+    margin: 0.3rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    font-size: 1rem;
+}
+
+select {
+    color: gray;
+}
+
+.fields textarea {
+    padding: 10px 18px;
+    margin: 0.3rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+}
+
+button[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background-color: rgb(57, 136, 77);
+    
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-white);
+    transition: background-color 0.2s;
+}
+
+button[type=submit]:hover {
+    background-color: rgb(50, 117, 67);
+}
+
+.clue {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #e4e4e4;
+}
